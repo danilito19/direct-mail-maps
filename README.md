@@ -14,4 +14,4 @@ followed by extraction:
 
 2. Install the basemap package from mpl_toolkits.  Follow the instructions at <http://matplotlib.org/basemap/users/installing.html>.
 3. Create a single-column CSV with the ZIP codes for the direct mail send to be processed.  The most convenient way to do this is to use the `cut` command to strip the ZIP column from a return file.  Save this file in the ZIPs directory.
-4. Finally, update the parameters on lines 11-14 of plotmap.py and execute with `python plotmap.py`. 
+4. Finally, run the script with `python plotmap.py -l US -z inputfile.csv -o outputfile.png`. You can also use the -m flag for color saturation. 
