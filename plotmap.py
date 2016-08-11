@@ -8,7 +8,7 @@ sudo pip install python-dateutil==2.2
 pip install Pillow
 
 Call this script like
-python plotmap.py -l US
+python plotmap.py -l US -z inputfile.csv -o outputfile.png
 
 """
 from mpl_toolkits.basemap import Basemap 
@@ -100,7 +100,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-l', '--locale', help='US or UK locale.')
     parser.add_argument('-m', '--max', help='full color saturation when letters >= maxcts, 0 for default ')
-    parser.add_argument('-z', '--zipcode', help="single column CSV with ZIPs of each letter, like: ZIPs/046ZIPs.csv")
+    parser.add_argument('-z', '--zipcode', help="input CSV file with single column zip codes, like: ZIPs/046ZIPs.csv")
     parser.add_argument('-o', '--out', help="path and name to output image, like: map.png")
 
     args = parser.parse_args()
